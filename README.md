@@ -223,7 +223,7 @@ flowchart TD
 ## 前端網址：
 
 - 課程列表：[http://127.0.0.1:8000/](http://127.0.0.1:8000/)
-- 課程詳情：[http://127.0.0.1:8000/courses/id/](http://127.0.0.1:8000/courses/2/)
+- 課程詳情：[http://127.0.0.1:8000/courses/課程id/](http://127.0.0.1:8000/courses/2/)
 - 老師列表：[http://127.0.0.1:8000/teachers/](http://127.0.0.1:8000/teachers/)
 - 學生列表：[http://127.0.0.1:8000/students/](http://127.0.0.1:8000/students/)
 - Django Admin：[http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)

@@ -192,12 +192,19 @@ python manage.py runserver
 
 ## 前端頁面示意
 ### 課程列表（Course List）
+<img width="2510" height="1125" alt="螢幕擷取畫面 (9)" src="https://github.com/user-attachments/assets/53ac46ab-8b08-475a-8f4e-fc398861ea7d" />
 
 ### 課程詳情（Course Detail）
+<img width="2504" height="1143" alt="螢幕擷取畫面 (10)" src="https://github.com/user-attachments/assets/1b4aa542-abd0-4048-b9cf-9cbfaa26b61c" />
 
 ### 老師列表（Teacher List）
+<img width="2505" height="1124" alt="螢幕擷取畫面 (11)" src="https://github.com/user-attachments/assets/2b1bfe83-b996-4837-ac2e-84cbe88ad163" />
 
 ### 學生列表（Student List）
+<img width="2496" height="1129" alt="螢幕擷取畫面 (12)" src="https://github.com/user-attachments/assets/9999ee52-9f17-497e-a054-e178e7846af9" />
+
+### Django Admin 後臺管理資料
+<img width="2509" height="1120" alt="螢幕擷取畫面 (13)" src="https://github.com/user-attachments/assets/abb619b5-a760-4779-810a-ce65b0bafec4" />
 
 ## 專案流程圖
 

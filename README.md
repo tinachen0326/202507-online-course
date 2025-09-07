@@ -56,7 +56,7 @@
 | 功能     | 方法   | 路徑                   | 說明            |
 | ------ | ---- | -------------------- | ------------- |
 | 課程列表   | GET  | /api/courses/        | 列出所有課程        |
-| 單一課程   | GET  | /api/courses/<id>/   | 課程詳細資訊        |
+| 單一課程   | GET  | /api/courses/課程id/   | 課程詳細資訊        |
 | 新增課程   | POST | /api/courses/create/ | 新增課程（提供老師 ID） |
 | 老師列表   | GET  | /api/teachers/       | 列出老師          |
 | 新增老師   | POST | /api/teachers/       | 新增老師          |

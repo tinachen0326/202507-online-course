@@ -64,7 +64,7 @@
 | 新增學生   | POST | /api/students/       | 新增學生          |
 | 學生報名課程 | POST | /api/enrollments/    | 報名課程          |
 
-## POST 請求格式（JSON）
+## API JSON
 
 1. 新增老師
 

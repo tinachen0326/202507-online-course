@@ -1,0 +1,50 @@
+{% extends 'home.html' %}
+
+{% block title %}課程列表 - 線上課程平台{% endblock %}
+
+{% block content %}
+<div class="bg-white rounded-lg shadow-md p-6">
+    <h2 class="text-2xl font-bold mb-6 text-gray-800">所有課程</h2>
+
+    {% if courses %}
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% for course in courses %}
+        <div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:shadow-lg transition-shadow">
+            <h3 class="text-xl font-semibold mb-3 text-blue-600">
+                <a href="{% url 'courses:course-detail' course.pk %}" class="hover:underline">
+                    {{ course.title }}
+                </a>
+            </h3>
+
+            <p class="text-gray-600 mb-4">{{ course.description|truncatechars:100 }}</p>
+
+            <div class="mb-4">
+                <span class="text-sm font-medium text-gray-700">授課老師：</span>
+                {% for teacher in course.teachers.all %}
+                <span class="inline-block bg-blue-100 text-blue-800 text-sm px-2 py-1 rounded mr-1">
+                    {{ teacher.name }}
+                </span>
+                {% empty %}
+                <span class="text-gray-500">暫無老師</span>
+                {% endfor %}
+            </div>
+
+            <div class="text-sm text-gray-500 mb-4">
+                建立時間：{{ course.created_at|date:"Y-m-d H:i" }}
+            </div>
+
+            <a href="{% url 'courses:course-detail' course.pk %}"
+                class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
+                查看詳情
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="text-center py-12">
+        <p class="text-gray-500 text-lg">目前沒有任何課程</p>
+        <p class="text-gray-400 mt-2">請到 <a href="/admin/" class="text-blue-600 hover:underline">管理後台</a> 新增課程</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

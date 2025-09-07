@@ -1,0 +1,57 @@
+{% extends 'home.html' %}
+
+{% block title %}學生列表 - 線上課程平台{% endblock %}
+
+{% block content %}
+<div class="bg-white rounded-lg shadow-md p-6">
+    <h2 class="text-2xl font-bold mb-6 text-gray-800">所有學生</h2>
+
+    {% if students %}
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% for student in students %}
+        <div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:shadow-lg transition-shadow">
+            <!-- 學生姓名 -->
+            <h3 class="text-xl font-semibold mb-3 text-blue-600">{{ student.name }}</h3>
+
+            <!-- Email -->
+            <div class="mb-2">
+                <span class="text-sm font-medium text-gray-700">Email：</span>
+                <p class="text-gray-600">{{ student.email }}</p>
+            </div>
+
+            <!-- 等級 -->
+            <div class="mb-2">
+                <span class="text-sm font-medium text-gray-700">等級：</span>
+                <p class="text-gray-600">{{ student.level }}</p>
+            </div>
+
+            <!-- 報名課程數量 -->
+            <div class="mb-2">
+                <span class="text-sm font-medium text-gray-700">報名課程數量：</span>
+                <span class="inline-block bg-blue-100 text-blue-800 text-sm px-2 py-1 rounded">
+                    {{ student.enrollment_set.count }} 門課程
+                </span>
+            </div>
+
+            <!-- 報名課程清單 -->
+            {% if student.enrollment_set.all %}
+            <div class="mt-3">
+                <span class="text-sm font-medium text-gray-700">已報名課程：</span>
+                <ul class="list-disc list-inside text-gray-600 text-sm mt-1 max-h-32 overflow-y-auto">
+                    {% for enrollment in student.enrollment_set.all %}
+                    <li>{{ enrollment.course.title }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="text-center py-12">
+        <p class="text-gray-500 text-lg">目前沒有任何學生</p>
+        <p class="text-gray-400 mt-2">請到 <a href="/admin/" class="text-blue-600 hover:underline">管理後台</a> 新增學生</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

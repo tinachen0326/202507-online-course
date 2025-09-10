@@ -177,7 +177,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-4. 建立 superuser（可選）
+4. 建立 superuser
 
 ```
 python manage.py createsuperuser

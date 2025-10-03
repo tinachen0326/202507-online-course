@@ -137,7 +137,7 @@
 202507-online-course/
 ├── manage.py
 ├── requirements.txt
-├── db.sqlite3
+├── db.sqlite3 #不上傳至github
 ├── project/
 │ ├── settings.py
 │ ├── urls.py

@@ -46,15 +46,20 @@
 | id | Integer | 主鍵，自動產生 |
 | title | Char(200) | 課程名稱 |
 | description | Text | 課程說明 |
-| teachers | ManyToMany → Teacher | 多位授課老師 |
 | created_at | DateTime | 課程建立時間 |
+
+### Course_teachers
+| 欄位名稱 | 型別 | 說明 |
+| --- | --- | --- |
+| course_id | ForeignKey → Course | 報名課程 |
+| student_id | ForeignKey → Student | 報名學生 |
 
 ### Enrollment
 | 欄位名稱 | 型別 | 說明 |
 | --- | --- | --- |
 | id | Integer | 主鍵，自動產生 |
-| student | ForeignKey → Student | 報名學生 |
-| course | ForeignKey → Course | 報名課程 |
+| student_id | ForeignKey → Student | 報名學生 |
+| course_id | ForeignKey → Course | 報名課程 |
 | enrolled_at | DateTime | 報名時間 |
 
 限制：學生對同一門課程只能報名一次

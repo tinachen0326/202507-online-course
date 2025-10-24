@@ -142,7 +142,7 @@
 202507-online-course/
 ├── manage.py
 ├── requirements.txt
-├── db.sqlite3 #不上傳至github
+├── db.sqlite3       #不上傳至github
 ├── project/
 │ ├── settings.py
 │ ├── urls.py
@@ -151,8 +151,8 @@
 │ ├── admin.py
 │ ├── models.py
 │ ├── views.py
-│ ├── urls.py # HTML template 前端頁面路由
-│ ├── api_urls.py # API 路由
+│ ├── urls.py        # HTML template 前端頁面路由
+│ ├── api_urls.py    # API 路由
 │ ├── serializers.py
 │ ├── migrations/
 │ ├── templates/
